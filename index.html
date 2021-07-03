@@ -1,0 +1,195 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!-- The above script is just in place to make it easier to test on FCC -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+</head>
+
+<title> FCC Survey Form</title>
+<body>
+    <form id="survey-form">
+        <div class="title">
+            <h1 id="title">Super Simple Character Sheet</h1>
+        </div>
+        <div class="title">
+            <p id="description">Wanna make a character? Tell me more...</p>
+        </div>
+    
+    <!-- Question 1 -Name Placeholder -->
+        <div class="questionTitle">
+            <p>Desired Username</p>
+        </div>
+        <div class="questionForm"  accept-charset="character_set">
+            <label id="name-label" for="name"></label>
+                <input 
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    required
+                >
+        </div>
+    <!-- Question 2 - Email Placeholder-->
+        <div class="questionTitle">
+            <p>Email Address</p>
+        </div>
+        <div class="questionForm">
+            <label id="email-label" for="email"></label>
+                <input 
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Email Address: "
+                    required
+                >
+        </div>
+    
+    <!-- Question 3 -Age Scroller -->
+        <div class="questionTitle">
+            <p>Choose a number between <br>1 - 110:</p>
+        </div>
+        <div class="questionForm">
+            <label id="number-label" for="number"></label>
+            <input 
+                id="number"
+                type="number"
+                name="age"
+                min="9"
+                max="110"
+                step="1"
+                placeholder="18"
+                required
+            >
+        </div>
+    
+        <!-- Question 4 - Radio Buttons -->
+        <!-- Input names on the radio buttons must be the same for the static choice to work -->
+        <div class="questionTitle">
+            <p>Character Race</p>
+        </div>
+        <div class="questionForm">
+            <label for ="Lylat" class="selectors">
+                <input 
+                    type="radio"
+                    id="optionCheck"
+                    name="question4"
+                    value="yes"
+                    class="inputRadio"
+                    checked
+                >
+                Lylat
+            </label>
+    
+            <label for ="Ilorian" class="selectors">
+                <input
+                    name="question4"
+                    type="radio"
+                    value="no"
+                    class="inputRadio"
+                >
+                Ilorian
+            </label>
+    
+            <label for="Xenid" class="selectors">
+                <input
+                    name="question4"
+                    type="radio"
+                    value="maybe"
+                    class="inputRadio"
+                >
+                Xenid
+            </label>
+        </div>
+    
+        <div class ="questionTitle">
+            <p>Character Weakness</p>
+        </div>
+    <!-- Drop Down Menu  -->
+        <div class="questionForm" id="dropdown">
+            <select selected value="yes">
+                <option value="0" disabled selected>Select An option</option>
+                <option value="1">Spiders</option>
+                <option value="2">Magic</option>
+                <option value="3">Steel</option>
+                <option value="4">Water</option>
+                <option value="5">Boredom</option>
+            <br>
+            </select>
+        </div>
+    
+    <!-- Checkbox Questions -->
+        <div class="questionTitle">
+            <p>Choose two (2) starting skills</p>
+        </div>
+            <div class="questionForm">
+                <label id="optionCheck" for="feature1">
+                    <input 
+                        type="checkbox" 
+                        name="feature1"
+                        value="Stalwart"
+                    >
+                    Stalwart
+                    </label>
+    
+                <label id="optionCheck" for="feature1">
+                    <input 
+                        type="checkbox" 
+                        name="feature1"
+                        value="potion_making"
+                    >
+                    Potion Making
+                    </label>
+    
+                <label id="optionCheck" for="feature1">
+                    <input 
+                        type="checkbox" 
+                        name="feature1"
+                        value="hand_to_hand"
+                    >
+                    Hand to Hand
+                    </label>
+                <label id="optionCheck" for="feature1">
+                        <input 
+                        type="checkbox" 
+                        name="feature1"
+                        value="necromancy"
+                    >
+                    Necromancy
+                    </label>
+    
+                <label id="optionCheck" for="feature1">
+                    <input 
+                        type="checkbox" 
+                        name="feature1"
+                        value="longbow"
+                    >
+                    Longbow
+                    </label>
+            </div>
+    
+    
+    
+            <div class="questionTitle">
+               <p>Other relevant character lore to enhance character's growth</p>
+            </div>
+                <div class="questionForm">
+                    <textarea name="comments" id="commentField" cols="60" rows="5" placeholder="Please enter your text here..."></textarea>
+                </div>
+        <br>
+        <div>
+            <button id="submit" class="btn btn-primary btn-lg btn-block">Complete</button>
+        </div>
+    </form>
+
+
+</body>
+
+<div class="container">
+    <p class="credits">Survey Form Project <br> Built By: Frank S Pelletier <br> Part of FCC Project</p>
+</html>
